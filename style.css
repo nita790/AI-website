@@ -1,0 +1,1133 @@
+/* reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* --------------- 共用 ---------------- */
+*,
+*::after,
+*::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid #000; */
+}
+
+body{
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: #000;
+  color: #fff;
+  margin: 0 auto;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+a{
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+a:hover{
+  color: #f18724;
+}
+
+button{
+  padding: 20px 40px;
+  font-size: 20px;
+  line-height: 1.2;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #525252;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+button:hover{
+  border: 1px solid #fff;
+}
+
+.container{
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.heading{
+  margin-bottom: 80px;
+}
+
+h2{
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+h3{
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+.title{
+  margin-bottom: 80px;
+}
+
+.material-icons{
+  vertical-align: middle;
+}
+
+/* --------------- 頁首 ---------------- */
+.header{
+  max-width: 1320px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 12px;
+  margin-bottom: 160px;
+}
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 40px;
+}
+
+.logo{
+  display: block;
+  text-indent: -9999px;
+  background-image: url(./images/logo.png);
+  width: 250px;
+  height: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mobile-icon{
+  display: none;
+}
+
+.mobile-icon span{
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.menu{
+  display: flex;
+  flex-direction: row;
+}
+
+.menu a{
+  display: block;
+  padding: 10px;
+}
+
+.menu-mobile{
+  display: none;
+}
+
+.home-banner{
+  position: relative;
+  height: 100%;
+  margin-bottom: 160px;
+}
+
+.home-banner .heading{
+  padding-bottom: 300px;
+  margin-bottom: 160px;
+}
+
+.slogan{
+  font-size: 120px;
+  line-height: 1.2;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+
+.animate{
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.animate img,
+.pricing-animate img {
+  max-width: 180px;
+  position: relative;
+  animation: slideUp 3.5s ease infinite;
+}
+
+.animate img:nth-child(2),
+.pricing-animate img:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.animate img:nth-child(1),
+.pricing-animate img:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+@keyframes slideUp {
+  0% {
+      top: 180px;
+  }
+  20% {
+      top: 0;
+  }
+  50% {
+      top: 0;
+  }
+  80% {
+      top: -180px;
+  }
+  100% {
+      top: -180px;
+  }
+}
+
+/* --------------- 服務 ---------------- */
+.service{
+  margin-bottom: 160px;
+}
+
+.service .heading{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+
+.para{
+  width: 65%;
+  margin-left: 24px;
+}
+
+.service-item .material-icons{
+  font-size: 80px;
+}
+
+.service-item-group{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.service-item{
+  max-width: 32%;
+  padding: 80px 40px;
+  border-radius: 16px;
+  border: 1px solid #525252;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.service-item:hover{
+  border: 1px solid #fff;
+}
+
+.service-item h3{
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+/* --------------- 合作 ---------------- */
+.partner{
+  margin-bottom: 160px;
+}
+
+.partner-logo{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.partner-logo:nth-child(2){
+  flex-direction: row-reverse;
+}
+
+.partner-logo img{
+  width: 160px;
+  height: 40px;
+  max-width: 160px;
+}
+
+.partner-logo::before {
+  content: "";
+  position: absolute;
+  width: 15%;
+  height: 100px;
+  background-image: linear-gradient(to right, #000 25%, rgba(0, 0, 0, 0));
+  z-index: 2;
+}
+
+.partner-item-group{
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.partner-item{
+  width: 32%;
+  height: 400px;
+  padding: 40px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, .08);
+  position: relative;
+}
+
+.star{
+  margin-bottom: 20px;
+}
+
+.star .material-icons{
+  font-size: 16px;
+  padding: 2px;
+}
+
+.user{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 40px;
+}
+.userinfo{
+  padding-left: 16px;
+}
+
+.userinfo p{
+  font-weight: 900;
+}
+
+/* --------------- 應用 ---------------- */
+.application{
+  background-color: #fff;
+  color: #000;
+  border-radius: 160px;
+  margin: auto;
+  padding-top: 160px;
+  padding-bottom: 160px;
+  margin-bottom: 80px;
+}
+
+.application .container{
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.application a{
+  color: #000;
+}
+
+.application h2{
+  text-align: center;
+  color: #000;
+  font-size: 80px;
+  line-height: 96px;
+  font-weight: 900;
+  margin-bottom: 80px;
+  padding: 0 32px;
+}
+
+.search-bar{
+  width: 100%;
+  background-image: url(./images/icons/search.png);
+  background-repeat: no-repeat;
+  background-position: 40px;
+  background-size: 24px;
+  padding: 20px 70px;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #f2f2f2;
+  color: #919191;
+  border: 1px solid #f2f2f2;
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+
+.application-nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.application-link{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.application-link a{
+  display: block;
+  padding: 8px 16px;
+  font-weight: 400;
+  margin: 4px;
+  color: #919191;
+  border-radius: 16px;
+}
+
+.application-link a:hover{
+  background-color: #f2f2f2;
+  color: #000;
+}
+
+.application-link .active a{
+  background-color: #f2f2f2;
+  color: #000;
+}
+
+.application-nav button{
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #f2f2f2;
+}
+
+.application-nav button:hover{
+  border: 1px solid #525252;
+}
+
+.application-nav button span{
+  margin: 6px;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.application-filter,
+.application-order{
+  position: relative;
+}
+
+.application-filter-menu,
+.application-order-menu{
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #f2f2f2;
+  border-radius: 16px;
+  position: absolute;
+  top: 74px;
+  left: 0;
+  z-index: 2;
+  overflow: hidden;
+  width: 160px;
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.application-order-menu{
+  width: 190px;
+}
+
+.application-filter-menu li,
+.application-order-menu li{
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+}
+
+.application-filter-menu a,
+.application-order-menu a{
+  color: #000;
+  font-weight: 400;
+  display: block;
+  padding: 16px;
+  margin: 0 auto;
+}
+
+.application-filter-menu li:hover,
+.application-order-menu li:hover{
+  background-color: #f2f2f2;
+}
+
+.application-item-group{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 80px;
+}
+
+.application-item{
+  max-width: 32%;
+  border-radius: 16px;
+  border: 1px solid #f2f2f2;
+  overflow: hidden;
+}
+
+.item-img img{
+  width: 100%;
+  display: block;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.item-content,
+.item-name,
+.item-info{
+  padding: 20px 32px;
+  border: 1px solid #f2f2f2;
+}
+
+.item-content{
+  height: 120px;
+}
+
+.item-content h4{
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 900;
+  padding-bottom: 12px;
+}
+
+.item-content p{
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #525252;
+}
+
+.item-name,
+.item-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.item-name h4{
+  font-weight: 900;
+}
+
+.item-info a{
+  font-weight: 400;
+}
+
+.pagination{
+  display: flex;
+  justify-content: end;
+}
+
+.pagination a{ 
+  display: block;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 48px;
+  margin: 4px;
+  border-radius: 16px;
+}
+
+.pagination .active a{
+  background-color: #000;
+  color: #fff;
+}
+
+.pagination a:hover{
+  background-color: #000;
+  color: #fff;
+}
+
+/* --------------- 開始 ---------------- */
+.start{
+  margin-bottom: 80px;
+}
+
+.start .container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px;
+}
+
+.start h2{
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+
+/* --------------- 頁尾 ---------------- */
+.footer{
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.footer .container{
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-menu{
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-menu a{
+  font-size: 80px;
+  line-height: 1.2;
+  font-weight: 900;
+  display: block;
+}
+
+.footer-nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 12px 0;
+  margin: 20px 0;
+}
+
+.copyright{
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  font-weight: 700;
+}
+
+.social{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+/* ------------ 定價頁首 --------------- */
+.pricing-banner{
+  margin-bottom: 160px;
+}
+
+.subtitle{
+  width: 700px;
+  float: right;
+  margin-bottom: 80px;
+}
+
+.pricing-animate{
+  clear: both;
+  margin-top: 160px;
+}
+
+/* --------------- 定價 ---------------- */
+.pricing{
+  margin-bottom: 160px;
+}
+
+.pricing-item-group{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.pricing-item{
+  max-width: 48%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  border: 1px solid #525252;
+}
+
+.pricing-item:hover{
+  border: 1px solid #fff;
+}
+
+.pricing-item-content{
+  padding: 40px;
+  width: 635px;
+  height: 300px;
+}
+
+.pricing-item-content h4{
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.pricing-item-content ul{
+  list-style-type: disc ;
+  padding-left: 20px ;
+}
+
+.pricing-item-content li{
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.pricing-item-info{
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #525252;
+  padding: 20px 40px;
+  color: #525252;
+}
+
+.pricing-item-info span{
+  color: #fff;
+}
+
+.pricing-item-info .Price{
+  font-size: 20px;
+  font-weight: 900;
+}
+
+/* --------------- 使用規範 ---------------- */
+.use .container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 160px;
+}
+
+.use .heading{
+  width: 30%;
+}
+
+.use .content{
+  width: 65%;
+}
+
+.use-item h3{
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 900;
+  margin-bottom: 24px;
+}
+
+.use-item h4{
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 400;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #919191;
+}
+
+/* --------------- 問題 ---------------- */
+.fqa .container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 160px;
+}
+
+.fqa .heading{
+  width: 30%;
+}
+
+.fqa .content{
+  width: 65%;
+}
+
+.fqa-item{
+  padding: 20px 40px;
+  border: 1px solid #525252;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.fqa-item:hover{
+  border: 1px solid #fff;
+}
+
+.fqa-item-link{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.fqa-item a:hover{
+  color: #fff;
+}
+.fqa-item-icon{
+  font-size: 24px;
+  line-height: 24px;
+  margin-right: 24px;
+}
+
+.fqa-item-info-add{
+  font-size: 20px;
+  font-size: 1.2;
+  font-weight: 900;
+}
+
+.fqa-item-info-remove{
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 16px 0;
+  font-weight: 500;
+}
+
+.fqa-item-icon-remove,
+.fqa-item-info-remove{
+  display: none;
+}
+
+/* ------------- 響應式 平板以下 -------------- */
+
+@media (max-width:991px){
+  .container{
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  /* --------------- 頁首 平板以下 ---------------- */
+  .header{
+    max-width: 960px;
+  }
+
+  .slogan{
+    font-size: 100px;
+  }
+  
+  /* --------------- 服務 平板以下 ---------------- */
+  .service-item {
+    padding: 40px;
+  }
+
+  /* --------------- 應用 平板以下 ---------------- */
+  .application-nav{
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .application-link{
+    order: 3;
+    margin: auto;
+  }
+
+  .application-item-group{
+    gap: 16px;
+  }
+
+}
+
+/* ------------- 響應式 手機 -------------- */
+
+@media (max-width:767px){
+  .container{
+    max-width: 700px;
+  }
+
+  button{
+    padding: 20px;
+  }
+
+  .title{
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  h3{
+    font-size: 32px;
+  }
+
+  /* --------------- 頁首 手機 ---------------- */
+  .header{
+    max-width: 700px;
+    margin-bottom: 120px;
+    height: 100%;
+  }
+
+  .logo{
+    width: 147px;
+    height: 24px;
+  }
+
+  .slogan{
+    font-size: 56px;
+  }
+
+  .menu{
+    display: none;
+  }
+
+  .mobile-icon{
+    display: block;
+  }
+  
+  .menu-mobile{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 81px;
+    z-index: 1;
+    background: #020202;
+    font-size: 80px;
+    text-align: center;
+    line-height: 1.2;
+    width: 100%;
+    height: calc(100%-81px);
+    padding: 120px 0;
+  }
+
+  .menu-mobile a{
+    display: block;
+    font-size: 80px;
+    margin: 80px auto;
+  }
+    
+  .animate{
+    margin-top: 100px;
+  }
+
+  .animate img,
+  .pricing-animate img {
+  max-width: 110px;
+  }
+
+  /* --------------- 服務 手機 ---------------- */
+  .service .heading{
+    flex-direction: column;
+    margin-bottom: 48px;
+  }
+  .para{
+    width: 100%;
+    margin: 0;
+  }
+
+  .service-item-group{
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .service-item{
+    max-width: 100%;
+    padding: 40px 20px;
+  }
+
+  /* --------------- 合作 手機 ---------------- */
+  .partner{
+    margin-bottom: 120px;
+  }
+
+  .partner-item-group{
+    flex-wrap: wrap;
+  }
+
+  .partner-item{
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* --------------- 應用 手機 ---------------- */
+  .application{
+    border-radius: 80px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-bottom: 40px;
+  }
+  .application .container{
+    max-width: 700px;
+  }
+
+  .application h2 {
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 900;
+    margin-bottom: 32px;
+  }
+
+  .application-link{
+    overflow: hidden;
+    flex-wrap: wrap;
+  }
+
+  .application-item-group{
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  
+  .application-item{
+    max-width: 100%;
+  }
+  
+  /* --------------- 開始 手機 ---------------- */
+  .start h2{
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+
+  /* --------------- 頁尾 手機 ---------------- */
+  .footer{
+    max-width: 700px;
+  }
+
+  .footer .container{
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+
+  .footer-menu a{
+    font-size: 48px;
+  }
+
+  .copyright {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .social {
+    gap: 12px;
+  }
+
+  /* ------------- 定價頁首 手機 -------------- */
+  .pricing-banner{
+    height: 100%;
+  }
+  .subtitle{
+    width: 300px;
+    margin-bottom: 200px;
+  }
+
+  /* --------------- 定價 手機 ---------------- */
+  .pricing{
+    margin-bottom: 120px;
+  }
+
+  .pricing .heading{
+    margin-bottom: 24px;
+  }
+
+  .pricing-item-group{
+    gap: 12px;
+  }
+  
+  .pricing-item{
+    max-width: 100%;
+  }
+
+  /* ------------- 使用規範 手機 -------------- */
+  .use .container {
+    flex-direction: column;
+    margin-bottom: 120px;
+  }
+  .use .heading{
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .use .content{
+    width: 100%;
+  }
+
+  /* --------------- 問題 手機 ---------------- */
+  .fqa .container{
+    flex-direction: column;
+    margin-bottom: 120px;
+  }
+  
+  .fqa .heading{
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  
+  .fqa .content{
+    width: 100%;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
